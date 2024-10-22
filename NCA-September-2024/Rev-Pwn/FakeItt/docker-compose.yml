@@ -1,0 +1,9 @@
+services:
+  fakeitt:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "6969:6969"
+    user: ctf
+    restart: always

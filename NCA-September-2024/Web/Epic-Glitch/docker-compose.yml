@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  flask_app:
+    build: .
+    container_name: epic_glitch
+    restart: unless-stopped
+    ports:
+      - "3113:3113"
+    volumes:
+      - .:/app
+      - ./ctf.db:/app/ctf.db
+    environment:
+      - FLASK_APP=app.py
+
+volumes:
+  db_data:

@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  flask_app:
+    build: .
+    container_name: robotbase
+    restart: unless-stopped
+    ports:
+      - "1331:1331"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_APP=app.py

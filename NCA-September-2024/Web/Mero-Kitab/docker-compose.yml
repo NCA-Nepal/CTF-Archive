@@ -1,0 +1,9 @@
+services:
+  php_app:
+    image: php:8.1-apache
+    container_name: mero_kitab
+    restart: unless-stopped
+    ports:
+      - "3223:80"
+    volumes:
+      - .:/var/www/html

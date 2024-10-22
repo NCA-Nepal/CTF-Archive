@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-body">
+                <h3 class="card-title text-center mb-4">Robot Login</h3>
+                {% if error %}
+                <div class="alert alert-danger">{{ error }}</div>
+                {% endif %}
+                <form method="POST" action="/login">
+                    <div class="mb-3">
+                        <label for="robot_id" class="form-label">Robot ID</label>
+                        <input type="text" class="form-control" id="robot_id" name="robot_id" placeholder="Enter Robot ID">
+                    </div>
+                    <div class="mb-3">
+                        <label for="access_code" class="form-label">Access Code</label>
+                        <input type="password" class="form-control" id="access_code" name="access_code" placeholder="Enter Access Code">
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

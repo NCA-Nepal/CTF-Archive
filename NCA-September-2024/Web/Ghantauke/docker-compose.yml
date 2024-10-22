@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  flask_app:
+    build: .
+    container_name: ghantauke
+    restart: unless-stopped
+    ports:
+      - "5115:5115"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_APP=app.py

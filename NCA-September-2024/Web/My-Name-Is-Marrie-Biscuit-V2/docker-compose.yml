@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  flask_app:
+    build: .
+    container_name: marriebiscuit
+    restart: unless-stopped
+    ports:
+      - "2332:2332"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_APP=app.py

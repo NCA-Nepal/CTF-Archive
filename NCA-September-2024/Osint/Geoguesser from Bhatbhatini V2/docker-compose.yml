@@ -1,0 +1,9 @@
+services:
+  php_app:
+    image: php:8.1-apache
+    container_name: geoguesserv2
+    restart: unless-stopped
+    ports:
+      - "2442:80"
+    volumes:
+      - .:/var/www/html
