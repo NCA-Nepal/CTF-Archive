@@ -1,2 +1,2 @@
 # CTF-Archive
-This repo contains the CTF Archieves of CTFs hosted by NCA@Nepal
+This repo contains the CTF Archives of CTFs hosted by NCA@Nepal
